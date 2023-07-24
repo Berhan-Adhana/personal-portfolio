@@ -1,0 +1,202 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  --hue: 162;
+  --first-color: hsl(var(--hue), 100%, 40%);
+  --first-color-alt: hsl(var(--hue), 56%, 35%);
+  --title-color: hsl(228, 8%, 95%);
+  --text-color: hsl(228, 8%, 65%);
+  --body-color: hsl(228, 15%, 20%);
+  --container-color: hsl(228, 15%, 15%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --biggest-font-size: 2rem;
+  --bigger-font-size: 1.25rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  input,
+  textarea,
+  button,
+  body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
+
+  body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+  }
+
+  input,
+  textarea,
+  button {
+    outline: none;
+    border: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+  /*========== Responsive typography ==========*/
+  @media screen and (min-width: 1152px) {
+    :root {
+      --biggest-font-size: 4rem;
+      --bigger-font-size: 2rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: 0.875rem;
+      --smaller-font-size: 0.813rem;
+    }
+  }
+}
+
+@layer components {
+  /*=============== REUSABLE CSS CLASSES ===============*/
+  .d-container {
+    @apply max-w-[1120px] mx-[1.5rem] xs:mx-[1rem] lg:mx-auto;
+  }
+
+  .d-grid {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  .about__blob path {
+    stroke: var(--first-color);
+  }
+
+  .section {
+    @apply pt-[5rem] pb-[2rem] lg:pt-[7rem] lg:pb-[2rem]
+    /* padding-block: 5rem 2rem; */;
+  }
+
+  .main {
+    overflow: hidden; /* For animation ScrollReveal */
+  }
+
+  /* Active link */
+  .active-link {
+    color: var(--first-color);
+  }
+
+  /*=============== SCROLL BAR ===============*/
+  ::-webkit-scrollbar {
+    width: 0.6rem;
+    border-radius: 0.5rem;
+    background-color: hsl(228, 12%, 25%);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: hsl(228, 8%, 35%);
+    border-radius: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(228, 8%, 45%);
+  }
+
+  .home__social-link {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  .home__blob {
+    filter: drop-shadow(0 12px 12px hsla(var(--hue), 100%, 40%, 0.2));
+  }
+
+  /*=============== BUTTON ===============*/
+  .button {
+    @apply inline-block bg-[var(--first-color)] p-[1rem_1.75rem] rounded-[.5rem] text-[var(--title-color)] font-[var(--font-medium)] transition-[box-shadow] duration-[400];
+  }
+
+  .button:hover {
+    box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, 0.25);
+  }
+
+  .projects__modal {
+    background: linear-gradient(
+      180deg,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(var(--hue), 70%, 40%, 0.8) 120%
+    );
+    backdrop-filter: blur(4px);
+  }
+
+  .footer__social-link {
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .skills__content {
+    grid-template-columns: repeat(2, max-content);
+  }
+}
+
+.blur-header::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 10%, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For safari */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
