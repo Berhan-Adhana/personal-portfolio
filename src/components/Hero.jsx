@@ -51,7 +51,7 @@ export const Hero = () => {
                   href={s.url}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex bg-[var(--first-color-alt)] p-[.5rem] text-[var(--title-color)] text-[1.5rem] transition-transform duration-500 hover:-translate-y-[.25rem] "
+                  className="home__social-link flex bg-[var(--first-color-alt)] p-[.5rem] text-[var(--title-color)] text-[1.5rem] transition-transform duration-500 hover:-translate-y-[.25rem] "
                 >
                   {<s.icon />}
                 </a>
