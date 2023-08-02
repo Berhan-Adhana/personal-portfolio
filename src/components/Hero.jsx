@@ -1,10 +1,6 @@
 /* eslint-disable react/no-unknown-property */
 
-import {
-  AiFillGithub,
-  AiFillLinkedin,
-  AiOutlineDribbble,
-} from "react-icons/ai";
+import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
 export const Hero = () => {
   return (
@@ -68,12 +64,8 @@ export const Hero = () => {
 
 const socialLinks = [
   {
-    url: "https://github.com/",
+    url: "https://github.com/Berhan-Adhana/",
     icon: AiFillGithub,
-  },
-  {
-    url: "https://dribbble.com/",
-    icon: AiOutlineDribbble,
   },
   {
     url: "https://www.linkedin.com/",

@@ -1,8 +1,4 @@
-import {
-  AiFillFacebook,
-  AiFillInstagram,
-  AiFillTwitterCircle,
-} from "react-icons/ai";
+import { AiFillFacebook, AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -43,15 +39,11 @@ const Footer = () => {
 
 const FooterSocialLinks = [
   {
-    link: "https://www.facebook.com/",
+    link: "https://www.facebook.com/profile.php?id=100008026564911&mibextid=ZbWKwL",
     icon: AiFillFacebook,
   },
   {
-    link: "https://www.instagram.com/",
-    icon: AiFillInstagram,
-  },
-  {
-    link: "https://twitter.com/",
+    link: "https://twitter.com/@Beghebray",
     icon: AiFillTwitterCircle,
   },
 ];
