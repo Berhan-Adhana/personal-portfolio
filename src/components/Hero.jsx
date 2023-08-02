@@ -30,7 +30,7 @@ export const Hero = () => {
                 Let&#8217;s Talk
               </a>
               <a
-                href="../../public/assets/images/tsiyon resume.pdf"
+                href="/assets/Berhan Ghebrerebi Adhana.pdf"
                 className="button"
                 download={true}
               >
