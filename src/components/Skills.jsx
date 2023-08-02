@@ -41,7 +41,8 @@ const Skills = () => {
           >
             <SkillsItem skill={"Git & GitHub"} />
             <SkillsItem skill={"Figma"} />
-            <SkillsItem skill={"Sketch"} />
+            <SkillsItem skill={"Node Js"} />
+            <SkillsItem skill={"Express Js"} />
           </ol>
         </div>
       </div>

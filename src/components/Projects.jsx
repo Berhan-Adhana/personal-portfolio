@@ -58,7 +58,7 @@ const Projects = () => {
       <article className=" relative rounded-[1rem] overflow-hidden group ">
         <img src={image} alt="projects image" className=" w-full h-full " />
 
-        <div className="group-hover:bottom-0 absolute left-0 -bottom-[100%] w-full h-full rounded-[1rem] flex flex-col justify-center items-center transition-[bottom] duration-500">
+        <div className="projects__modal group-hover:bottom-0 absolute left-0 -bottom-[100%] w-full h-full rounded-[1rem] flex flex-col justify-center items-center transition-[bottom] duration-500">
           <span className=" text-[var(--title-color)] text-[length:var(--small-font-size)] block mb-[.25rem]">
             {subtitle}
           </span>
